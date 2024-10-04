@@ -92,7 +92,6 @@ export default function PreferenciasUsuario() {
         />
       </View>
 
-      {/* Botão para resetar preferências */}
       <Button title="Resetar Preferências" onPress={resetarPreferencias} />
     </View>
   );
