@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, Switch, Button, StyleSheet, Modal, FlatList } from 'react-native';
-import Slider from '@react-native-community/slider';  // Certifique-se de instalar corretamente
+import Slider from '@react-native-community/slider';
 
 export default function PreferenciasUsuario() {
   // Estados
@@ -39,12 +39,10 @@ export default function PreferenciasUsuario() {
 
   return (
     <View style={[styles.container, { backgroundColor: cores.fundo }]}>
-      {/* Título */}
       <Text style={[styles.titulo, { color: cores.texto, fontSize: tamanhoFonte }]}>
         Configurações de Preferências
       </Text>
       
-      {/* Botão para abrir Modal de seleção de tema */}
       <Text style={[styles.rotulo, { color: cores.texto }]}>Tema:</Text>
       <TouchableOpacity
         style={styles.botaoTema}
@@ -53,7 +51,6 @@ export default function PreferenciasUsuario() {
         <Text style={[styles.textoBotao, { color: cores.texto }]}>{tema}</Text>
       </TouchableOpacity>
 
-      {/* Modal para selecionar tema */}
       <Modal
         transparent={true}
         visible={modalVisivel}
@@ -73,7 +70,6 @@ export default function PreferenciasUsuario() {
         </View>
       </Modal>
 
-      {/* Slider para o tamanho da fonte */}
       <Text style={[styles.rotulo, { color: cores.texto }]}>
         Tamanho da Fonte: {tamanhoFonte}
       </Text>
@@ -86,7 +82,6 @@ export default function PreferenciasUsuario() {
         onValueChange={(value) => setTamanhoFonte(value)} // Altera dinamicamente o tamanho da fonte
       />
 
-      {/* Switch para Modo Noturno */}
       <View style={styles.containerSwitch}>
         <Text style={[styles.rotulo, { color: cores.texto }]}>
           Modo Noturno: {modoNoturno ? 'Ativado' : 'Desativado'}
